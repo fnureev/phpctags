@@ -368,6 +368,11 @@ class PHPCtags
                 $str .= "\t" . "access:" . $struct['access'];
             }
 
+            #field=l
+            if (in_array('l', $this->mOptions['fields'])) {
+                $str .= "\t" . "language:PHP";
+            }
+
             $str .= "\n";
         }
 
